@@ -100,6 +100,16 @@ If you need an embargo for patents or confidentiality, file the
 | Mathematics, Physics, **Chemistry**, Oceanography, College of Social Sciences, College of Law | **3** | Main Library |
 | College of Medicine, College of Public Health | **2** | Medical Library |
 
+> ⚠️ **This table mixes two levels — it is easy to misread.** The official wording is
+> "Mathematics, Physics, Chemistry, Oceanography, College of Social Sciences,
+> College of Law — **all departments**: 3 copies". The first four are **individually
+> named departments**; only the last two are **entire colleges**.
+> So do **not** infer "the whole College of Science needs 3" just because Mathematics,
+> Physics, Chemistry, and Oceanography belong to it — other departments in that college
+> (Geosciences, Psychology, Atmospheric Sciences, etc.) are **not named and fall under
+> the general 2-copy rule**. The count **includes 1 copy forwarded to the National
+> Central Library**. Confirm with your graduate secretary before printing.
+
 ### Required components of the printed thesis
 - Cover (**including the spine information**)
 - Title page (same content as the cover)
