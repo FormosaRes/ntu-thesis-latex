@@ -1,0 +1,25 @@
+%%==============================================================================
+%%  bookspine.tex  —  書背／側邊 單獨編譯 (standalone book-spine compilation).
+%%
+%%  Some binders want the spine as its own PDF. This file reuses the same class
+%%  and metadata so the spine always matches the cover. Keep the \ntusetup block
+%%  below IDENTICAL to main.tex (or \input a shared metadata file).
+%%
+%%  Compile:  xelatex bookspine.tex   ->  bookspine.pdf
+%%==============================================================================
+\documentclass[master]{ntuthesis}
+
+\ntusetup{
+  degree    = master,
+  deptCH    = 地質科學系,          % ← 與 main.tex 相同 (keep identical to main.tex)
+  titleCH   = 國立臺灣大學碩博士論文 LaTeX 範本,
+  authorCH  = 王小明,
+  dateCH    = 中華民國一一五年七月,
+}
+
+% Spine length — set to your bound volume's printable spine height.
+% \setlength{\spineheight}{25cm}
+
+\begin{document}
+\makespine
+\end{document}

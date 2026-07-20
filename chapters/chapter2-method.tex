@@ -1,0 +1,39 @@
+\chapter{研究方法 Methods}
+\label{ch:method}
+
+本章示範學位論文常用的三種元素：數學公式、圖、表。
+
+\section{數學公式 Equations}
+行內公式如 $E = mc^2$；編號的展示公式如式\eqref{eq:demo}：
+\begin{equation}
+  \label{eq:demo}
+  \int_{a}^{b} f(x)\,\mathrm{d}x = F(b) - F(a).
+\end{equation}
+
+\section{圖 Figures}
+以 \texttt{\textbackslash includegraphics} 置入圖檔（存於 \texttt{figures/}）。此處以
+一個佔位方框代替真實圖檔，讓範本不需附圖即可編譯；實務上請改用註解中的寫法。
+\begin{figure}[htbp]
+  \centering
+  % 真實用法：\includegraphics[width=0.7\textwidth]{figures/your-figure.pdf}
+  \fbox{\begin{minipage}[c][4cm][c]{0.7\textwidth}\centering（範例圖檔佔位 placeholder figure）\end{minipage}}
+  \caption{圖題範例。若圖擷取自參考文獻，須於圖題標註來源（規範八）。}
+  \label{fig:demo}
+\end{figure}
+
+\section{表 Tables}
+表格建議使用 \texttt{booktabs} 的三線表樣式，見表\ref{tab:demo}。
+\begin{table}[htbp]
+  \centering
+  \caption{表題範例。若表擷取自參考文獻，須於表中標註來源（規範九）。}
+  \label{tab:demo}
+  \begin{tabular}{lcc}
+    \toprule
+    項目 Item & 數值 Value & 單位 Unit \\
+    \midrule
+    樣本數 $n$      & 120  & --   \\
+    平均值 $\bar{x}$ & 3.14 & cm   \\
+    標準差 $s$      & 0.27 & cm   \\
+    \bottomrule
+  \end{tabular}
+\end{table}

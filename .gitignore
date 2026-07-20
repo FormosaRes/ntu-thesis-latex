@@ -1,0 +1,18 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.xdv
+# Build outputs (a pre-compiled example.pdf / example-bookspine.pdf is
+# committed instead so students can preview without compiling).
+main.pdf
+bookspine.pdf
+missfont.log

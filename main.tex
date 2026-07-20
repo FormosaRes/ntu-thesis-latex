@@ -1,0 +1,78 @@
+%%==============================================================================
+%%  國立臺灣大學碩博士論文 LaTeX 範本  —  National Taiwan University Thesis
+%%  ── 從這裡開始 (start here) ──
+%%
+%%  Compile with XeLaTeX (required for Chinese):
+%%      latexmk -xelatex main.tex
+%%  or:  xelatex main ; bibtex main ; xelatex main ; xelatex main
+%%
+%%  Class options:  master | doctor  ,  oneside | twoside
+%%==============================================================================
+\documentclass[master,oneside]{ntuthesis}
+
+% Bibliography style — author–year is common in the sciences; swap for any
+% journal .bst if your field prefers numeric citations.
+\usepackage[round,authoryear]{natbib}
+\bibliographystyle{plainnat}
+
+% Add your own packages here (amsmath is preloaded below as a demo):
+\usepackage{amsmath}
+
+%------------------------------------------------------------------------------
+%  ★ 全部論文資訊只改這裡一個地方 (edit ALL metadata in this one block)
+%------------------------------------------------------------------------------
+\ntusetup{
+  degree        = master,                 % master | doctor
+  collegeCH     = 理學院,
+  collegeEN     = College of Science,
+  deptCH        = 地質科學系,               % ← 改成你的系所 (change to your dept)
+  deptEN        = Department of Geosciences,
+  titleCH       = 國立臺灣大學碩博士論文 LaTeX 範本,
+  titleEN       = A LaTeX Thesis Template for National Taiwan University,
+  authorCH      = 王小明,
+  authorEN      = Xiao-Ming Wang,
+  studentID     = R12XXX001,
+  advisorCH     = 指導教授姓名,
+  advisorEN     = Advisor Name,
+  advisortitleCH= 博士,
+  advisortitleEN= Ph.D.,
+  % coadvisorCH = 共同指導教授姓名,          % 有共同指導教授才填
+  % coadvisorEN = Co-advisor Name,
+  dateCH        = 中華民國一一五年七月,
+  dateEN        = July 2026,
+  examdateCH    = 一一五年七月一日,
+  examdateEN    = {July 1, 2026},
+  keywordsCH    = {臺灣大學, 學位論文, LaTeX, 範本, 排版},          % 規範要求 5–7 個
+  keywordsEN    = {National Taiwan University, thesis, LaTeX, template, typesetting},
+}
+
+\begin{document}
+
+%============================ FRONT MATTER ====================================
+\maketitlepage        % 封面／書名頁 (附件1–2)
+\makespine            % 書背／側邊 (§2) — 亦可用 bookspine.tex 單獨編譯後移除此行
+\makecertificate      % 口試委員會審定書 (附件3) — 正式版以掃描簽名頁替換
+
+\frontmatter          % 前置部分改用小寫羅馬頁碼
+\input{front/acknowledgements}   % 謝辭 (§4，可選)
+\input{front/abstract-zh}        % 中文摘要 (§5)
+\input{front/abstract-en}        % 英文摘要 (§6)
+% \input{front/denotation}       % 符號說明 (可選)
+\maketoc              % 目次／圖次／表次
+
+%============================== MAIN MATTER ===================================
+\mainmatter           % 正文改用阿拉伯頁碼
+\input{chapters/chapter1-introduction}
+\input{chapters/chapter2-method}
+\input{chapters/chapter3-conclusion}
+
+%============================== REFERENCES ====================================
+\clearpage
+\addcontentsline{toc}{chapter}{參考文獻}
+\bibliography{back/references}
+
+%============================== APPENDIX ======================================
+\appendix
+\input{back/appendix}
+
+\end{document}

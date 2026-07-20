@@ -1,0 +1,21 @@
+\chapter{緒論 Introduction}
+\label{ch:intro}
+
+本章示範中英文混排、章節標題、交叉參照與文獻引用。中文採 12 號楷書、1.5 倍行距，
+英文採 12 號 Times New Roman，皆由 \texttt{ntuthesis.cls} 依規範自動設定。
+
+\section{研究背景 Background}
+段落中可自由混用中文與 English text。跨語言自動斷行已由 \texttt{xeCJK} 處理。
+引用文獻使用 \texttt{natbib}：括號引用 \citep{knuth1984texbook}、
+文中引用 \citet{lamport1994latex}。
+
+\section{文獻引用與交叉參照 Citations and cross-references}
+交叉參照範例：本論文結構見第\ref{ch:conclusion}章；方法見第\ref{ch:method}章。
+公式、圖、表亦可交叉參照，見式\eqref{eq:demo}、圖\ref{fig:demo}、表\ref{tab:demo}。
+
+\section{論文架構 Thesis organization}
+\begin{itemize}
+  \item 第\ref{ch:intro}章：緒論。
+  \item 第\ref{ch:method}章：研究方法（示範圖、表、公式）。
+  \item 第\ref{ch:conclusion}章：結論。
+\end{itemize}
