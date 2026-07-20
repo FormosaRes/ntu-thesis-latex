@@ -4,7 +4,8 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Engine](https://img.shields.io/badge/Engine-XeLaTeX-green.svg)](#-環境需求-requirements)
 [![Version](https://img.shields.io/badge/Version-1.0-orange.svg)](ntuthesis.cls)
-[![格式規範](https://img.shields.io/badge/%E6%A0%BC%E5%BC%8F%E8%A6%8F%E7%AF%84-112.10.20-lightgrey.svg)](#-規範對照-regulation-mapping)
+[![格式規範](https://img.shields.io/badge/%E6%A0%BC%E5%BC%8F%E8%A6%8F%E7%AF%84-112.10.20-lightgrey.svg)](docs/format-spec.md)
+[![書背](https://img.shields.io/badge/%E6%9B%B8%E8%83%8C-%E8%A3%BD%E4%BD%9C%E8%AA%AA%E6%98%8E-8A2BE2.svg)](docs/bookspine.md)
 [![離校手續](https://img.shields.io/badge/%E9%9B%A2%E6%A0%A1%E6%89%8B%E7%BA%8C-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B-9cf.svg)](docs/graduation-checklist.md)
 [![Build](https://github.com/FormosaRes/ntu-thesis-latex/actions/workflows/build.yml/badge.svg)](https://github.com/FormosaRes/ntu-thesis-latex/actions/workflows/build.yml)
 
@@ -13,10 +14,46 @@
 《國立臺灣大學碩、博士學位論文格式規範》（**112.10.20 / 2023** 教務會議通過）實作。
 給臺大碩博生一個開箱即用、看得懂、改得動的起點。
 
-📄 **想先看成品？** 直接打開 [`example.pdf`](example.pdf)（內文版面）與
+## 🔎 你可能是為了這兩件事來的
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 📐 學校要的格式長怎樣？
+
+<a href="docs/format-spec.md"><img src="docs/img/preview-cover.png" width="230" alt="封面範例"></a>
+
+**[👉 格式規範速查（一頁看完）](docs/format-spec.md)**
+
+封面版面與字級、論文次序、邊界行距、印製裝訂、
+要繳幾冊 —— **不用會 LaTeX、不用下載**，
+直接在網頁上看完。
+
+</td>
+<td width="50%" valign="top">
+
+### 📏 書背怎麼做？
+
+<a href="docs/bookspine.md"><img src="docs/img/preview-spine-flat.png" width="100%" alt="書背範例"></a>
+
+**[👉 書背製作完整說明](docs/bookspine.md)**
+
+上面要放什麼、**寬度怎麼抓**（最多人卡住的地方）、
+Word／LaTeX／交給廠商三種做法、送印前檢查清單。
+
+📥 直接下載 [Word 版書背](word/ntu-bookspine.docx)
+
+</td>
+</tr>
+</table>
+
+---
+
+📄 **想看完整成品？** [`example.pdf`](example.pdf)（15 頁內文版面）與
 [`example-bookspine.pdf`](example-bookspine.pdf)（書背），即為本範本編譯結果。
 
-📄 **只想要封面／書背,不想碰 LaTeX？** → [**Word 版範本**](word/)（下載填空即可）
+📄 **只想要封面／書背，不想碰 LaTeX？** → [**Word 版範本**](word/)（下載填空即可）
 
 ☁️ **沒裝過 LaTeX？不用裝。** 點下面按鈕直接在瀏覽器開始寫 →
 [![Open in Overleaf](https://img.shields.io/badge/Open%20in-Overleaf-47A141?logo=overleaf&logoColor=white)](https://www.overleaf.com/docs?snip_uri=https://github.com/FormosaRes/ntu-thesis-latex/archive/refs/heads/main.zip)
@@ -68,6 +105,8 @@ ntu-thesis-latex/
 │   ├── ntu-cover.docx
 │   └── ntu-bookspine.docx
 ├── docs/
+│   ├── format-spec.md               # 📐 格式規範速查（學校要什麼，一頁看完）
+│   ├── bookspine.md                 # 📏 書背製作完整說明（含寬度怎麼抓）
 │   ├── overleaf.md                  # ☁️ 零安裝：在 Overleaf 上寫論文
 │   ├── graduation-checklist.md      # 🎓 離校手續完整流程（申請口試→領證書）
 │   └── graduation-checklist-en.md   # 🎓 同上，英文版（給國際生）
