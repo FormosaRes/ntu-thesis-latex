@@ -238,13 +238,17 @@
 %------------------------------------------------------------------------------
 % Front-matter environments.
 %------------------------------------------------------------------------------
-\newenvironment{acknowledgements}{\chapter*{誌\hspace{1em}謝}\addcontentsline{toc}{chapter}{誌謝}}{\clearpage}
-\newenvironment{abstractCH}{\chapter*{摘\hspace{1em}要}\addcontentsline{toc}{chapter}{中文摘要}}{%
+% \chapter* 不呼叫 \refstepcounter，因此不會建立 hyperref 錨點；若直接
+% \addcontentsline，目次連結會沿用「上一個」錨點而整整早一頁。必須在
+% \chapter* 之後（已換頁）、\addcontentsline 之前插入 \phantomsection。
+\newcommand{\ntu@tocentry}[1]{\phantomsection\addcontentsline{toc}{chapter}{#1}}
+\newenvironment{acknowledgements}{\chapter*{誌\hspace{1em}謝}\ntu@tocentry{誌謝}}{\clearpage}
+\newenvironment{abstractCH}{\chapter*{摘\hspace{1em}要}\ntu@tocentry{中文摘要}}{%
   \ifx\ntu@keywordsCH\empty\else\par\vspace{1em}\noindent\textbf{關鍵詞：}\ntu@keywordsCH\fi\clearpage}
-\newenvironment{abstractEN}{\chapter*{Abstract}\addcontentsline{toc}{chapter}{Abstract}}{%
+\newenvironment{abstractEN}{\chapter*{Abstract}\ntu@tocentry{Abstract}}{%
   \ifx\ntu@keywordsEN\empty\else\par\vspace{1em}\noindent\textbf{Keywords:}\ \ntu@keywordsEN\fi\clearpage}
 \newenvironment{denotation}[1][2.5cm]{%
-  \chapter*{符號說明}\addcontentsline{toc}{chapter}{符號說明}%
+  \chapter*{符號說明}\ntu@tocentry{符號說明}%
   \begin{list}{}{\setlength{\labelwidth}{#1}\setlength{\labelsep}{0.5em}\setlength{\itemindent}{0pt}%
     \setlength{\leftmargin}{\labelwidth}\addtolength{\leftmargin}{\labelsep}\setlength{\rightmargin}{0pt}%
     \renewcommand{\makelabel}[1]{##1\hfil}}}{\end{list}\clearpage}
@@ -257,11 +261,17 @@
 \renewcommand{\listtablename}{表\hspace{1em}次}
 \renewcommand{\bibname}{參考文獻}
 \renewcommand{\appendixname}{附錄}
+% \addcontentsline 必須在 \listoffigures 之「前」且已換頁後才呼叫：
+% 寫在後面時記錄的是清單最後一頁，圖次一旦超過一頁連結就會指錯。
 \newcommand{\maketoc}{%
   \singlespacing
+  \clearpage\pdfbookmark[0]{目次}{ntu@toc}%   目次本身也要有 PDF 書籤
   \tableofcontents\clearpage
-  \listoffigures\addcontentsline{toc}{chapter}{圖次}\clearpage
-  \listoftables\addcontentsline{toc}{chapter}{表次}\clearpage
+  \ntu@tocentry{圖次}\listoffigures\clearpage
+  \ntu@tocentry{表次}\listoftables\clearpage
   \linespread{1.5}\normalsize}
+
+% 參考文獻同樣需要自己的錨點，否則會沿用最後一章的錨點。
+\newcommand{\makebibheading}{\clearpage\phantomsection}
 
 \endinput
