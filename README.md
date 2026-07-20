@@ -16,12 +16,15 @@
 📄 **想先看成品？** 直接打開 [`example.pdf`](example.pdf)（內文版面）與
 [`example-bookspine.pdf`](example-bookspine.pdf)（書背），即為本範本編譯結果。
 
+📄 **只想要封面／書背,不想碰 LaTeX？** → [**Word 版範本**](word/)（下載填空即可）
+
 ☁️ **沒裝過 LaTeX？不用裝。** 點下面按鈕直接在瀏覽器開始寫 →
 [![Open in Overleaf](https://img.shields.io/badge/Open%20in-Overleaf-47A141?logo=overleaf&logoColor=white)](https://www.overleaf.com/docs?snip_uri=https://github.com/FormosaRes/ntu-thesis-latex/archive/refs/heads/main.zip)
 （開啟後**務必**把編譯器改成 XeLaTeX，見 [Overleaf 使用說明](docs/overleaf.md)）
 
-> ⚠️ **非官方範本 (unofficial).** 定稿前請對照
-> [臺大圖書館 — 論文繳交及離校手續](https://www.lib.ntu.edu.tw/node/103) 的最新規定，
+> ⚠️ **非官方範本 (unofficial).** 定稿前請對照官方文件：
+> [**《格式規範》THESISSAMPLE.doc**](https://www.lib.ntu.edu.tw/doc/cl/THESISSAMPLE.doc)（規範全文，含封面等附件範例）
+> 與 [臺大圖書館 — 論文繳交及離校手續](https://www.lib.ntu.edu.tw/node/103)，
 > 並與指導教授及系所確認。各系所得依規範 §13 另訂細節。
 
 🎓 **論文排好版之後呢？** → [**臺大碩博士離校手續完整流程**](docs/graduation-checklist.md)
@@ -61,6 +64,9 @@ ntu-thesis-latex/
 │   ├── appendix.tex          # 附錄
 │   └── references.bib        # 參考文獻資料庫
 ├── figures/              # 放圖檔
+├── word/                 # 📄 Word 版封面與書背（不用 LaTeX 也能用）
+│   ├── ntu-cover.docx
+│   └── ntu-bookspine.docx
 ├── docs/
 │   ├── overleaf.md                  # ☁️ 零安裝：在 Overleaf 上寫論文
 │   ├── graduation-checklist.md      # 🎓 離校手續完整流程（申請口試→領證書）
