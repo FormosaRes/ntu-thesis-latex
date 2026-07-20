@@ -1,6 +1,7 @@
 # 📐 臺大論文格式規範速查<br>What NTU actually requires
 
 **一頁看完學校要求的格式長什麼樣。** 不用會 LaTeX、不用下載任何東西。
+English: [format-spec-en.md](format-spec-en.md)
 
 > 📌 依據《國立臺灣大學碩、博士學位論文格式規範》
 > （95.9.22 訂定，**112.10.20 修正**，教務會議通過）。**最後查證：2026-07-20**

@@ -25,6 +25,7 @@
 <a href="docs/format-spec.md"><img src="docs/img/preview-cover.png" width="230" alt="封面範例"></a>
 
 **[👉 格式規範速查（一頁看完）](docs/format-spec.md)**
+<sub>［[English](docs/format-spec-en.md)］</sub>
 
 封面版面與字級、論文次序、邊界行距、印製裝訂、
 要繳幾冊 —— **不用會 LaTeX、不用下載**，
@@ -38,6 +39,7 @@
 <a href="docs/bookspine.md"><img src="docs/img/preview-spine-flat.png" width="100%" alt="書背範例"></a>
 
 **[👉 書背製作完整說明](docs/bookspine.md)**
+<sub>［[English](docs/bookspine-en.md)］</sub>
 
 上面要放什麼、**寬度怎麼抓**（最多人卡住的地方）、
 Word／LaTeX／交給廠商三種做法、送印前檢查清單。
@@ -105,8 +107,8 @@ ntu-thesis-latex/
 │   ├── ntu-cover.docx
 │   └── ntu-bookspine.docx
 ├── docs/
-│   ├── format-spec.md               # 📐 格式規範速查（學校要什麼，一頁看完）
-│   ├── bookspine.md                 # 📏 書背製作完整說明（含寬度怎麼抓）
+│   ├── format-spec.md / -en.md      # 📐 格式規範速查（學校要什麼，一頁看完）
+│   ├── bookspine.md / -en.md        # 📏 書背製作完整說明（含寬度怎麼抓）
 │   ├── overleaf.md                  # ☁️ 零安裝：在 Overleaf 上寫論文
 │   ├── graduation-checklist.md      # 🎓 離校手續完整流程（申請口試→領證書）
 │   └── graduation-checklist-en.md   # 🎓 同上，英文版（給國際生）
