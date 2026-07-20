@@ -1,5 +1,12 @@
 # 國立臺灣大學碩博士論文 LaTeX 範本<br>NTU Thesis / Dissertation LaTeX Template
 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Engine](https://img.shields.io/badge/Engine-XeLaTeX-green.svg)](#-環境需求-requirements)
+[![Version](https://img.shields.io/badge/Version-1.0-orange.svg)](ntuthesis.cls)
+[![格式規範](https://img.shields.io/badge/%E6%A0%BC%E5%BC%8F%E8%A6%8F%E7%AF%84-112.10.20-lightgrey.svg)](#-規範對照-regulation-mapping)
+[![離校手續](https://img.shields.io/badge/%E9%9B%A2%E6%A0%A1%E6%89%8B%E7%BA%8C-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B-9cf.svg)](docs/graduation-checklist.md)
+[![Build](https://github.com/FormosaRes/ntu-thesis-latex/actions/workflows/build.yml/badge.svg)](https://github.com/FormosaRes/ntu-thesis-latex/actions/workflows/build.yml)
+
 一份**非官方、開放使用**的 XeLaTeX 範本，適用於**國立臺灣大學**所有系所的碩士論文與
 博士論文。版面依據校方**現行**規範
 《國立臺灣大學碩、博士學位論文格式規範》（**112.10.20 / 2023** 教務會議通過）實作。
@@ -11,6 +18,9 @@
 > ⚠️ **非官方範本 (unofficial).** 定稿前請對照
 > [臺大圖書館 — 論文繳交及離校手續](https://www.lib.ntu.edu.tw/node/103) 的最新規定，
 > 並與指導教授及系所確認。各系所得依規範 §13 另訂細節。
+
+🎓 **論文排好版之後呢？** → [**臺大碩博士離校手續完整流程**](docs/graduation-checklist.md)
+從申請學位考試、口試、電子論文上傳、紙本冊數、授權書，到領學位證書，一頁走完。
 
 ---
 
@@ -45,6 +55,8 @@ ntu-thesis-latex/
 │   ├── appendix.tex          # 附錄
 │   └── references.bib        # 參考文獻資料庫
 ├── figures/              # 放圖檔
+├── docs/
+│   └── graduation-checklist.md   # 🎓 離校手續完整流程（申請口試→領證書）
 ├── .github/workflows/build.yml  # CI：自動編譯並產出 PDF
 └── LICENSE               # MIT
 ```
