@@ -1,5 +1,6 @@
 # 國立臺灣大學碩博士論文 LaTeX 範本<br>NTU Thesis / Dissertation LaTeX Template
 
+[![Open in Overleaf](https://img.shields.io/badge/Open%20in-Overleaf-47A141?logo=overleaf&logoColor=white)](https://www.overleaf.com/docs?snip_uri=https://github.com/FormosaRes/ntu-thesis-latex/archive/refs/heads/main.zip)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Engine](https://img.shields.io/badge/Engine-XeLaTeX-green.svg)](#-環境需求-requirements)
 [![Version](https://img.shields.io/badge/Version-1.0-orange.svg)](ntuthesis.cls)
@@ -14,6 +15,10 @@
 
 📄 **想先看成品？** 直接打開 [`example.pdf`](example.pdf)（內文版面）與
 [`example-bookspine.pdf`](example-bookspine.pdf)（書背），即為本範本編譯結果。
+
+☁️ **沒裝過 LaTeX？不用裝。** 點下面按鈕直接在瀏覽器開始寫 →
+[![Open in Overleaf](https://img.shields.io/badge/Open%20in-Overleaf-47A141?logo=overleaf&logoColor=white)](https://www.overleaf.com/docs?snip_uri=https://github.com/FormosaRes/ntu-thesis-latex/archive/refs/heads/main.zip)
+（開啟後**務必**把編譯器改成 XeLaTeX，見 [Overleaf 使用說明](docs/overleaf.md)）
 
 > ⚠️ **非官方範本 (unofficial).** 定稿前請對照
 > [臺大圖書館 — 論文繳交及離校手續](https://www.lib.ntu.edu.tw/node/103) 的最新規定，
@@ -57,6 +62,7 @@ ntu-thesis-latex/
 │   └── references.bib        # 參考文獻資料庫
 ├── figures/              # 放圖檔
 ├── docs/
+│   ├── overleaf.md                  # ☁️ 零安裝：在 Overleaf 上寫論文
 │   ├── graduation-checklist.md      # 🎓 離校手續完整流程（申請口試→領證書）
 │   └── graduation-checklist-en.md   # 🎓 同上，英文版（給國際生）
 ├── .github/workflows/build.yml  # CI：自動編譯並產出 PDF
@@ -65,13 +71,31 @@ ntu-thesis-latex/
 
 ## 🔧 環境需求 Requirements
 
-| 項目 | 需求 |
-|---|---|
-| TeX 發行版 | TeX Live 2022+ / MiKTeX（含 `xeCJK`, `fontspec`, `adjustbox`）|
-| 編譯引擎 | **XeLaTeX（必須）** — 處理中文與字型 |
-| 建議字型 | 標楷體（BiauKai）、Times New Roman；缺字時自動 fallback |
+**兩條路,挑一條就好:**
+
+| | ☁️ 路線 A：Overleaf（推薦新手） | 🖥️ 路線 B：本機編譯 |
+|---|---|---|
+| 要安裝什麼 | **什麼都不用裝**,瀏覽器即可 | TeX Live 2022+ / MiKTeX |
+| 適合 | 沒碰過 LaTeX、不想搞環境 | 長論文、想編譯快一點 |
+| 編譯引擎 | 手動選 **XeLaTeX**（預設是 pdfLaTeX,**一定要改**）| **XeLaTeX（必須）** |
+| 中文字型 | 伺服器內建 `AR PL UKai TW`,**開箱即可編出楷體** | 建議裝標楷體;缺字時自動 fallback |
+| 說明 | 👉 [**docs/overleaf.md**](docs/overleaf.md) | 見下方快速開始 |
+
+> 需要的 LaTeX 套件：`xeCJK`, `fontspec`, `adjustbox`（Overleaf 與完整版 TeX Live 都已內含）。
 
 ## 🚀 快速開始 Quick start
+
+### ☁️ 路線 A：Overleaf（零安裝）
+
+[![Open in Overleaf](https://img.shields.io/badge/Open%20in-Overleaf-47A141?logo=overleaf&logoColor=white)](https://www.overleaf.com/docs?snip_uri=https://github.com/FormosaRes/ntu-thesis-latex/archive/refs/heads/main.zip)
+
+1. 點上面按鈕 → Overleaf 自動建立你的專案
+2. ⚠️ `Menu ▸ Settings ▸ Compiler` 改成 **XeLaTeX**、`Main document` 設為 `main.tex`
+3. 按 Recompile,開始寫
+
+完整圖解、字型上傳、疑難排解 → [**docs/overleaf.md**](docs/overleaf.md)
+
+### 🖥️ 路線 B：本機編譯
 
 1. 下載或 `git clone` 本範本。
 2. 打開 **`main.tex`**，只改 `\ntusetup{...}` 區塊（系所、題目、姓名、指導教授、
@@ -84,7 +108,6 @@ ntu-thesis-latex/
    xelatex bookspine.tex            # 產出 bookspine.pdf（書背）
    ```
 
-- **Overleaf**：上傳整個資料夾 → `Menu → Compiler` 選 **XeLaTeX** → 主文件設為 `main.tex`。
   Overleaf 內建 fandol／TeX Gyre Termes，字型 fallback 會自動生效。
 - **VS Code**：安裝 LaTeX Workshop，設定使用 `latexmk (xelatex)` recipe。
 
@@ -146,7 +169,9 @@ ntu-thesis-latex/
 ## ❓ 常見問題 FAQ
 
 - **編譯出現一堆亂碼／缺字？** 請確認用的是 **XeLaTeX**，不是 pdfLaTeX。
-- **中文變成別的字體？** 本機沒有標楷體，套用了 fallback；安裝標楷體即可。
+  Overleaf 預設是 pdfLaTeX，**一定要手動改** → [說明](docs/overleaf.md)。
+- **中文變成別的字體？** 沒有標楷體，套用了 fallback（正常，仍是楷書）。
+  要精準標楷體：把 `kaiu.ttf` 放進專案，解除 `main.tex` 裡 `\setCJKmainfont` 那行的註解。
 - **書背題目太長被切掉？** 已用 `adjustbox` 自動縮放；仍要更長可調大 `\spineheight`。
 - **審定書要簽名？** 正式版須列印後由口試委員與指導教授親簽，通常以掃描頁替換此頁。
 
