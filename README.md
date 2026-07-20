@@ -20,6 +20,7 @@
 > 並與指導教授及系所確認。各系所得依規範 §13 另訂細節。
 
 🎓 **論文排好版之後呢？** → [**臺大碩博士離校手續完整流程**](docs/graduation-checklist.md)
+（[English](docs/graduation-checklist-en.md)）
 從申請學位考試、口試、電子論文上傳、紙本冊數、授權書，到領學位證書，一頁走完。
 
 ---
@@ -56,7 +57,8 @@ ntu-thesis-latex/
 │   └── references.bib        # 參考文獻資料庫
 ├── figures/              # 放圖檔
 ├── docs/
-│   └── graduation-checklist.md   # 🎓 離校手續完整流程（申請口試→領證書）
+│   ├── graduation-checklist.md      # 🎓 離校手續完整流程（申請口試→領證書）
+│   └── graduation-checklist-en.md   # 🎓 同上，英文版（給國際生）
 ├── .github/workflows/build.yml  # CI：自動編譯並產出 PDF
 └── LICENSE               # MIT
 ```

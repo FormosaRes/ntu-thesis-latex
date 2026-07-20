@@ -2,6 +2,7 @@
 
 從**申請學位考試**到**領取學位證書**的完整路線圖。本頁專講「論文寫完之後的事」——
 排版問題請回 [README](../README.md)。
+English: [graduation-checklist-en.md](graduation-checklist-en.md)
 
 > ⚠️ **非官方整理 (unofficial).** 本頁依校方公開頁面整理，**最後查證日期：2026-07-20（民國115年）**。
 > 校方規定會逐年調整，**每一步請以下列官方頁面的當期公告為準**：
